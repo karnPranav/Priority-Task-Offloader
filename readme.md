@@ -15,4 +15,4 @@ This project simulates priority task offloading for autonomous cars using Python
 2. Create a virtual environment and activate it.
 3. Install dependencies: `pip install -r requirements.txt`
 4. Run the simulation: `python main.py`
-# Priority-task-offloading
+
