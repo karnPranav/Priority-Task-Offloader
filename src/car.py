@@ -6,8 +6,8 @@ class Car:
         self.id = id
         self.x = x
         self.y = y
-        self.local_ram = random.randint(8, 16)  # Added local RAM for the car
-        self.local_rom = random.randint(50, 100)  # Added local ROM for the car
+        self.local_ram = random.randint(16, 64)
+        self.local_rom = random.randint(100, 256)
         self.tasks = []
 
     def generate_tasks(self, num_tasks):
@@ -26,3 +26,7 @@ class Car:
             return True
         return False
 
+    def reset_resources(self):
+        # Reinitialize local resources to simulate a fresh run
+        self.local_ram = max(self.local_ram, 16)
+        self.local_rom = max(self.local_rom, 100)
