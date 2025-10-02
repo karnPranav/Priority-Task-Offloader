@@ -10,3 +10,7 @@ class Server:
 
     def can_handle_task(self, task):
         return self.available_ram >= task.ram and self.available_rom >= task.rom
+
+    def reset_resources(self):
+        self.available_ram = self.ram
+        self.available_rom = self.rom
